@@ -9,7 +9,7 @@ select
     dropOff_datetime as dropoff_datetime,
     SR_Flag as sr_flag
 
-from {{ source('staging','hfv_2019') }}
+from {{ source('staging','fhv_external') }}
 -- where EXTRACT(YEAR FROM pickup_datetime) = 2019
 -- dbt build -m stg_fhv_2019.sql --vars '{is_test_run:false}'
 
